@@ -26,14 +26,14 @@ public class Usuario implements Serializable {
 	@Column(name = "id")
 	private int id;
 
-	@Column(name = "enabled")
-	private Boolean enabled;
-
 	@Column(name = "username", unique = true, length = 20)
 	private String username;
 
 	@Column(name = "password", length = 60)
 	private String password;
+
+	@Column(name = "enabled")
+	private Boolean enabled;
 
 	@Column(name = "nombre")
 	private String nombre;
