@@ -10,26 +10,26 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "rol")
+@Table(name = "roles")
 public class Rol implements Serializable {
 
 	private static final long serialVersionUID = 1181177323109120649L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	private int id;
+	@Column(name = "_id")
+	private Long id;
 
 	@Column(name = "nombre", unique = true, length = 30)
 	private String nombre;
 
 	// ------ AUTOGENERADOS ------
 
-	public int getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

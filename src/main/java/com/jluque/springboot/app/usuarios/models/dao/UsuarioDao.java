@@ -12,9 +12,10 @@ public interface UsuarioDao extends PagingAndSortingRepository<Usuario, Long> {
 	public Usuario findByUsername(String username);
 
 	// Usando query JPA y Native query
-	@Query("select u from Usuario u where u.username=?1 and u.email=?2")
-	public Usuario buscarPorJpaUsername(String username, String email);
+//	@Query("select u from Usuario u where u.username=?1 and u.email=?2 ")
+	@Query("select u from Usuario u where u.username=?1")
+	public Usuario buscarPorJpaUsername(String username);
 
-	@Query(value = "select usuario from usuario=1", nativeQuery = true)
-	public Usuario buscarPorNativeUsername(String username, String email);
+//	@Query(value = "select usuario from usuario=1", nativeQuery = true)
+//	public Usuario buscarPorNativeUsername(String username, String email);
 }
